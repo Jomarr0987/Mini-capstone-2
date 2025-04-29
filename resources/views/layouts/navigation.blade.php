@@ -26,9 +26,8 @@
                 </x-nav-link>
 
                 @role('admin')
-                <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" class="relative group text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                <x-nav-link href="{{ url('admin/dashboard') }}" :active="request()->is('admin/dashboard')" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-indigo-800 hover:bg-indigo-50 hover:border-indigo-500 transition duration-150 ease-in-out">
                     Dashboard
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
                 </x-nav-link>
                 @endrole
                 @endauth
@@ -108,7 +107,7 @@
             </x-nav-link>
 
             @role('admin')
-            <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-indigo-800 hover:bg-indigo-50 hover:border-indigo-500 transition duration-150 ease-in-out">
+            <x-nav-link href="{{ url('admin/dashboard') }}" :active="request()->is('admin/dashboard')" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-indigo-800 hover:bg-indigo-50 hover:border-indigo-500 transition duration-150 ease-in-out">
                 Dashboard
             </x-nav-link>
             @endrole

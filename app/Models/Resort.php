@@ -8,8 +8,14 @@ class Resort extends Model
 {
     use HasFactory;
 
-    // Define the fillable fields
     protected $fillable = ['name', 'location', 'address', 'contact', 'email', 'image'];
 
-    // Optional: You can set up a relationship with another model if needed.
+    public function bookings() {
+        return $this->hasMany(Booking::class);
+    }
+    
+    public function rooms()
+    {
+        return $this->hasMany(Room::class);
+    }
 }
